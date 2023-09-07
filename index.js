@@ -8,7 +8,7 @@ try {
   console.log(`Hello ${nameToGreet}!`);
   console.log(`Hello me ${me}!`);
   const time = (new Date()).toTimeString();
-  core.setOutput("me ", time);
+  core.setOutput("me", me);
   core.setOutput("time", time);
   
 
