@@ -8,10 +8,12 @@ inputs:
   me:
     descritpion: 'i am'
     required: false
-    default: 'me'
+    default: 'me1'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
+  me:
+    description: 'me test'
 runs:
   using: 'node16'
   main: 'dist/index.js'
