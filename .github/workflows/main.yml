@@ -10,6 +10,9 @@ jobs:
         uses: peerapach/action-test1@v1.4
         with:
           who-to-greet: 'Mona the Octocat'
+          me: "me na"
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Get output me
+        run: echo "me: ${{ steps.hello.outputs.me}}"
