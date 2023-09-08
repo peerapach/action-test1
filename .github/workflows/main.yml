@@ -16,3 +16,13 @@ jobs:
         run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: Get output me
         run: echo "me out -> ${{ steps.hello.outputs.me }}"
+  example_matrix:
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, ubuntu-20.04]
+        version: [10, 12, 14]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.version }}
